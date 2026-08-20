@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="description" content="Demonstrates some basic HTML form elements" >
+        <meta name="keywords" content="HTML, Form, tags" >
+        <meta name="author" content="A Lecturer"  >
+        <title>HTML Form Example</title>
+    </head>
+
+    <body>
+        <a href="http://www.swin.edu.au/">
+            <img src="logo.png" alt="Swinburne Logo" width="200" height="100" >
+        </a>
+
+        <h1>CWA Help Desk Appointment</h1>
+        <p>The Help Desk is located in ATC620. Open 10.30 to 19.00 Monday to Friday</p>
+
+        <p>Check Blackboard for when CWA tutors will be there.</p>
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+            <!--Note we have to use a special escape character to print an apostrophe on the Web page -->
+           
+            <fieldset>
+                <legend>Student details</legend>
+                <p><label for="studentid">Student ID</label> ,
+                    <input type="text" name= "studentid" id="studentid" maxlength="10" size="10" pattern="^[0-9]{7,9}$" required="required">
+                </p>
+                <p><label for="givenname">Given Name</label> 
+                    <input type="text" name= "givenname" id="givenname" maxlength="15" size="20" required="required">
+                </p>
+                <p><label for="familyname">Family Name</label> 
+                    <input type="text" name= "familyname" id="familyname" maxlength="15" size="20" required="required">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Your unit</legend>
+                <p><label for= "COS10011">COS10011</label>
+                <input type= "radio" name="unit" value="COS10011"  id="COS10011" required="required">
+                </p>
+
+                <p><label for= "COS26004">COS26004</label>
+                <input type= "radio" name="unit" value="COS26004" id="COS26004" required="required">
+                </p>
+
+                <p><label for= "COS60007">COS60007</label>
+                <input type= "radio" name="unit" value="COS60007" id="COS60007" required="required">
+                </p>
+
+                <p><label for="tutor">Your Tutor</label> 
+                    <select name="tutor" id="tutor" required="required">
+                        <option value="">Please Select</option>
+                        <option value="johnny">Johnny Depp</option>
+                        <option value="louise">Louise Simmons</option>
+                        <option value="sarah">Sarah Simmons</option>
+                        <option value="simon">Simon Daniels</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Issue</legend>
+                <p><label for="html">HTML</label> 
+                    <input type="checkbox" name= "type" id="html" value="HTML" checked="checked">
+                </p>
+
+                <p><label for="css">CSS</label> 
+                    <input type="checkbox" name= "type" id="css" value="CSS">
+                </p>
+
+                <p><label for="javascript">JavaScript</label> 
+                    <input type="checkbox" name= "type" id="javascript" value="JavaScript">
+                </p>
+
+                <p><label for="PHP">PHP</label> 
+                    <input type="checkbox" name= "type" id="PHP" value="PHP">
+                </p>
+
+                <p><label for="MySQL">MySQL</label> 
+                    <input type="checkbox" name= "type" id="MySQL" value="MySQL">
+                </p>
+                <p><label for="issue">Description of Issue</label></p>
+                <textarea id="issue" name="issue" rows="4" cols="40" placeholder="Write description of your problem here..."></textarea>
+            
+              
+            </fieldset>
+
+            <fieldset>
+                    <legend>Preferred Date/Time</legend>
+                   <p><label for="date">Date</label> 
+                        <input type="text" id="date" name="date" placeholder="dd-mm-yyyy" maxlength="8" size="8" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
+                    </p>
+                    <p><label for="time">Time</label> 
+                        <input type="text" id="time" name="time" placeholder="00:00" maxlength="4" size="4" pattern="[0-9]{2}:[0-9]{2}">
+                    </p>
+               
+            </fieldset>
+            
+            <input type= "submit" value="Book Appointment">
+            <input type= "reset" value="Reset Form">
+        </form>
+    </body>
+</html>
